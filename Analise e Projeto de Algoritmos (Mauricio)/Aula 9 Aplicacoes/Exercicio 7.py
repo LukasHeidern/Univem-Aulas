@@ -1,23 +1,11 @@
-'''5) Um colégio quer certificar com honra ao mérito o aluno que obteve a melhor 
-média final entre todos. Considerando que a turma possui 40 aluno, elabore um 
-algoritmo que leia o nome e a média final de cada aluno e, em seguida,  mostre  o 
-nome e a média do melhor aluno (a maior entre todas).'''
+'''7.) Elabore um algoritmo que mostre todos os números ascendentes menores que 1000. 
+Um número é ascendente se seus algarismos estão em ordem crescente. Por exemplo, o 
+número 258 é ascendente, pois, 2 < 5 e 5 < 8.'''
 
-from random import randint
+for i in range(1,1000):
+    u = i % 10
+    d = i % 100 //10
+    c = i // 100
 
-i = 0 
-n = 0
-media = 0
-aluno = 0
-
-
-while n != 40: 
-    i = float(input(f"media:"))
-    if 0 <= i <= 10:
-        n += 1
-        if i > media:
-            media = i; aluno = n
-        print(f"Aluno {n} Media {i}")
-    else: print("Media Invalida!")
-
-print(f"O aluno {aluno} possui a maior media: {media}")
+    if c > d > u: print(i)
+    
