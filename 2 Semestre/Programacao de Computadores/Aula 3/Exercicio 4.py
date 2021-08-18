@@ -7,7 +7,7 @@ nomes = []
 n = ""
 while True:
     n = input("Digite um nome ou digite 'q' para sair: ")
-    if n == 'q':_break
+    if n == 'q':   break
     else: nomes.append(n)
 nomes = nomes.sort()
 for i in nomes:

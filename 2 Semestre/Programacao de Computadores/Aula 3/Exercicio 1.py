@@ -6,4 +6,4 @@ AMO
 AMOR'''
 
 string = input("Digite uma palavra: ")
-for i in range(len(string)+1): print(string[0:i])
+for i in range(len(string)): print(string[0:i+1])
