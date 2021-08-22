@@ -12,10 +12,19 @@ compara-se  com  as  respectivas  posições  da  string  e  informe  se  o  CPF
 válido  ou inválido.
 '''
 cpf = ""
+d1 = 0
+d2 = 0
 while True:
     cpf = input("Digite somente os numeros do seu CPF: ")
-    if cpf.isalpha() or len(cpf) > 11: print("CPF invalido")
+    if not cpf.isdigit() or len(cpf) > 11: print("CPF invalido")
     else: break
 
-
+for i,d in enumerate(cpf[:9]):
+    d1 += int(d) * (i+1)
+    d2 += int(d) * (9-i)
+    
+d1 = 0 if d1%11 == 10 else d1%11
+d2 = 0 if d2%11 == 10 else d2%11
+if str(d1)+str(d2) == cpf[9:]: print("CPF Valido!")
+else: print("CPF Invalido!")
 

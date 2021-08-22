@@ -1,0 +1,1 @@
+Reescrita dos exercicios da aula 3 usando funcoes que foram o tema da aula 4.
