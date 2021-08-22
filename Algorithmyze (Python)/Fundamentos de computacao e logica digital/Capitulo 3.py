@@ -1,23 +1,8 @@
-
 def notacao_posicional():
 ### NOTACAO POSICIONAL
 
     '''numeros na base 'b' possuem digitos que representam valores que vao de zero (0) a 'b-1'
-    focando no objetivo que sao as bases 2, 4, 8, 10 e 16 os algarismos delas seriam os seguintes:
-
-        Algebricamente pode ser representado da seguinte maneira:
-
-        (numeros que representam a parte positiva)
-        ... (N[-p] * B ^ (-p)) + (N[-2] * B ^ (-2)) + (N[-1] * B ^ (-1))
-
-        (numeros que representam a parte negativa)
-        (N[0] * B ^ (0)) + (N[1] * B ^ (1)) + (N[p] * B ^ (p)) ...
-
-        onde:
-        'N' e o valor passado;
-        'B' e a base;
-        'p' e a posicao do algarismo
-    '''
+    focando no objetivo que sao as bases 2, 4, 8, 10 e 16 os algarismos delas seriam os seguintes:'''
 
     while True:
         base = int(input("Exibir algarismos da"
@@ -48,6 +33,20 @@ def dados_numericos():
     '''Na Base Hexadecimal (16) os valores 10, 11, 12, 13, 14 e 15 sao representados por
     'A' 'B' 'C' 'D' 'E' e 'F' respectivamente'''
 
+    '''Algebricamente pode ser representado da seguinte maneira:
+
+            (numeros que representam a parte positiva)
+            ... (N[-p] * B ^ (-p)) + (N[-2] * B ^ (-2)) + (N[-1] * B ^ (-1))
+
+            (numeros que representam a parte negativa)
+            (N[0] * B ^ (0)) + (N[1] * B ^ (1)) + (N[p] * B ^ (p)) ...
+
+            onde:
+            'N' e o valor passado;
+            'B' e a base;
+            'p' e a posicao do algarismo
+    '''
+
     while True:
         base = int(input("Representar algarismos da"
                          "\nBase 2 (Base Binaria)"
@@ -59,8 +58,13 @@ def dados_numericos():
         if base not in [2, 4, 8, 10, 16]: print("Base Invalida!!!(╬ ಠ益ಠ)")
         else: break
 
-    if base == 2:
-        valor = int(input(f"Digite um valor em binario: "))
-        print("A equacao e: ",valor)
-        for i,j in enumerate(str(valor).split()):
-            print(f"{valor[i]}[{j}] * {base} ^ ({j}))")
+    valor = list(input("Digite um valor na base que escolheu: "))
+    print("A representacao e: ",end="")
+        
+    for i,j in enumerate(valor[::-1]):
+        print(f"({j} * {base} ^ ({i})) + ",end="")
+
+    print(f"\b\b= ",*valor)
+
+####################################################################################################
+
