@@ -2,6 +2,7 @@
 utilizando a seguinte regra: para cada vogal, somar 5 pontos, para cada consoante somar 
 10 pontos, desconsiderando qualquer outro caractere.'''
 
+import unidecode
 string = input("Digite uma string: ").lower()
 string = unidecode.unidecode(string)
 codigo = 0
