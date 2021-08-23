@@ -62,9 +62,10 @@ def dados_numericos():
     print("A representacao e: ",end="")
         
     for i,j in enumerate(valor[::-1]):
-        print(f"({j} * {base} ^ ({i})) + ",end="")
-
+        if valor[-1] == '-': print(f"(-{j} * {base} ^ ({i})) - ",end="")
+        else: print(f"({j} * {base} ^ ({i})) + ",end="")
     print(f"\b\b= ",*valor)
 
 ####################################################################################################
 
+dados_numericos()
