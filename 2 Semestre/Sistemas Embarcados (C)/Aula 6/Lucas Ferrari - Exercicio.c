@@ -24,10 +24,10 @@ int main(){
 		if (C_odigo >= 100 && C_odigo <= 106){
 	        
 			while (1) {
-				printf("Digite a quantidaede: ");
+				printf("Digite a quantidade: ");
 				scanf("%i",&Q_uantidade);
 				
-				if (Q_uantidade < 0) {printf("Quantidade Invalida");}
+				if (Q_uantidade < 0) {printf("Valor Invalido\n");}
 				else {break;} }
 				
 	        if (C_odigo == 100){
@@ -61,11 +61,6 @@ int main(){
         
     	else if(C_odigo == 0){break;}
     	
-    	else{printf("Codigo Invalido!");}
-	printf("O valor total da compra e %0.2f",P_total);
-		
-    }
-		
-    
-    
-}
+    	else{printf("Codigo Invalido!");} }
+    	
+	printf("O valor total da compra e %0.2f",P_total);	}
