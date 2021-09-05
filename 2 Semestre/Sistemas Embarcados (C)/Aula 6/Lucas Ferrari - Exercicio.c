@@ -23,9 +23,13 @@ int main(){
 		
 		if (C_odigo >= 100 && C_odigo <= 106){
 	        
-			printf("Digite a quantidaede: ");
-	        scanf("%i",&Q_uantidade);
-	          
+			while (1) {
+				printf("Digite a quantidaede: ");
+				scanf("%i",&Q_uantidade);
+				
+				if (Q_uantidade < 0) {printf("Quantidade Invalida");}
+				else {break;} }
+				
 	        if (C_odigo == 100){
 	            P_total += Q_uantidade * 1.20; 
 	            printf("Cachorro Quente    100         1,20 x %i\nTotal - %0.2f",Q_uantidade, 1.20 * Q_uantidade);}
