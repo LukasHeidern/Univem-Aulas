@@ -51,7 +51,7 @@ int main(){
 	            printf("Cheeseburger       104         1,70 x %i\nTotal - %0.2f",Q_uantidade, 1.70 * Q_uantidade);}
 	
 	        else if (C_odigo == 105){
-	            P_total += Q_uantidade * 1.20;
+	            P_total += Q_uantidade * 2.20;
 	            printf("Suco               105         2,20 x %i\nTotal - %0.2f",Q_uantidade, 2.20 * Q_uantidade);}
 	
 	        else if (C_odigo == 106){
