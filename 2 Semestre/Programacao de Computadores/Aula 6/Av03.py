@@ -46,49 +46,25 @@ def dec2base(base, value): # 1
 def main():
     while True:
         while True:
-            print(f"1 - Converter base 10 para base 'n';\n"
-                  f"2 - Converter base 'n' para base 10;\n"
-                  f"0 - sair.")
-            op = input("Digite a opcao que deseja: ")
-            if op in '120':break
+            o_base = input("Digite a a base de saida: ")
+            if base_check(o_base):
+                o_base = int(o_base)
+                break
             else: print("Opcao invalida!")
 
-        if op == '2':
-            while True:
-                base = input("Digite a base: ")
-                if base_check(base):
-                    base = int(base)
-                    break
-                else: print("Base Invalida!")
+        while True:
+            value = input("Digite o valor: ").upper()
+            if value_check(i_base,value): break
+            else: print("Valor Invalido!")
 
-            while True:
-                value = input("Digite o valor: ").upper()
-                if value_check(base,value): break
-                else: print("Valor Invalido!")
-            print(f"valor na base {base}: {value}\n"
-                f"valor na base 10: {base2dec(base,value)}")
+        n_value = dec2base(o_base,base2dec(i_base,value))
 
-        elif op == '1':
-            while True:
-                base = input("Digite a base")
-                if base_check(base):
-                    base = int(base)
-                    break
-                else:print("Base Invalida!")
+        print(f"\nValores"
+              f"\nBase {i_base}: {value}"
+              f"\nBase {o_base}: {n_value}\n")
 
-            while True:
-                value = input("Digite o valor: ")
-                if value.isnumeric():
-                    value = int(value)
-                    break
-                else: print("Valor Invalido!")
+        if input("Deseja Sair?: ")[0] in "YySs": quit = True
 
-            print(f"valor na base 10: {value}\n"
-                f"valor na base {base}: {dec2base(base,value)}")
-
-        elif op == '0': break
-
-    print("Encerrado")
 
 ##-------------------------##
 main()
