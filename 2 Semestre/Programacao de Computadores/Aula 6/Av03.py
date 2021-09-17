@@ -44,7 +44,6 @@ def dec2base(base, value): # 1
 
 ## inicia o programa
 def main():
-    while True:
         while True:
             o_base = input("Digite a a base de saida: ")
             if base_check(o_base):
