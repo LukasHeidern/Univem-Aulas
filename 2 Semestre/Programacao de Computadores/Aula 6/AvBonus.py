@@ -44,16 +44,17 @@ def decomposition(values):
 
 
 def main():
-    primes,matrix,mmc = decomposition(get_values())
+    values = get_values()
+    if len(values) > 0:
+        primes,matrix,mmc = decomposition(values)
 
-    print("Decomposicao")
-    for l,line in enumerate(matrix):
-        for e,element in enumerate(line):
-            if e == len(line)-1 and l != len(matrix)-1: print(f'    |{element:5}')
-            else: print(f'{element:5}',end="")
-    print(f"\n\nPrimos:{primes}")
-     
-    print(f"MMC: {mmc}")
+        print("Decomposicao")
+        for l,line in enumerate(matrix):
+            for e,element in enumerate(line):
+                if e == len(line)-1 and l != len(matrix)-1: print(f'    |{element:5}')
+                else: print(f'{element:5}',end="")
+        print(f"\n\nPrimos:{primes}")
 
+        print(f"MMC: {mmc}")
 
 main()
