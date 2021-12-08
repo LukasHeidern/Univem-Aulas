@@ -44,6 +44,7 @@ def decomposition(values):
 
 
 def main():
+
     values = get_values()
     if len(values) > 0:
         primes,matrix,mmc = decomposition(values)
